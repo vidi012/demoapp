@@ -1,35 +1,5 @@
-For APIs - demo for github webhook trigger2
+# Java-Mysql-Simple-Login-Web-application
 
-# Run test
-```
-$mvnw clean test
-```
-
-# Create WAR file
-```
-$mvnw clean package
-```
-
-#  How to run web server with Apache Tomcat ?
-
-```
-$mvnw tomcat7:run
-```
-
-#  Run in browser 
-* http://localhost:8080/api/hello
-* http://localhost:8080/api/hello.html
+This is a simple demonstration project to showcase conatinerization of Java web application and Mysql database in docker and Kubernetes environment.
 
 
-
-## Step to create server
-
-1. สร้าง MySQL Database
-```
-docker container run -d -p 3306:3306  \
--e MYSQL_ROOT_PASSWORD=password \
--e MYSQL_DATABASE=wallet \
--e MYSQL_USER=user01 \
--e MYSQL_PASSWORD=xitgmLwmp \
---name db2 mysql:5.7.21
-```

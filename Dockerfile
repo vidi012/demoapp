@@ -1,15 +1,11 @@
-FROM almalinux
+FROM tomcat:9.0
 
-RUN  yum update -y &&  yum install java-11-openjdk -y &&  yum install git -y &&  yum install maven -y
+# Copy the .war file from the build stage into the Tomcat webapps directory
+COPY ./target/*.war /usr/local/tomcat/webapps/ROOT.war
 
-RUN git clone https://github.com/suhailasad/demoapp.git
+# Expose the default Tomcat port
+EXPOSE 8080
 
-WORKDIR $PWD/demoapp
+# Start Tomcat when the container launches
+CMD ["catalina.sh", "run"]
 
-RUN mvn clean
-
-RUN mvn test -X
-
-RUN mvn package
-
-CMD ["mvn" , "tomcat7:run"]
