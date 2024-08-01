@@ -1,5 +1,5 @@
-# Java-Mysql-Simple-Login-Web-application
+# Java-Login-Web-Application
 
-This is a simple demonstration project to showcase conatinerization of Java web application and Mysql database in docker and Kubernetes environment.
+This is a simple demonstration project to showcase conatinerization of Java web application in docker and Kubernetes environment.
 
 
