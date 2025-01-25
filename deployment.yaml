@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: addressbook-container
-          image: suhailasad/addressbook:0.1
+          image: vidi012/addressbook:0.1
           ports:
             - containerPort: 8080
